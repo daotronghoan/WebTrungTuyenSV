@@ -1,0 +1,27 @@
+﻿@model List<C1D1_DaoTrongHoan_2021606290.Models.ThiSinh>
+
+<div>
+    <h2>DANH SÁCH THÍ SINH</h2>
+    <table class="text-bg-light" border="0">
+        <tr>
+            <th>SBD</th>
+            <th>Họ tên</th>
+            <th>Điểm Toán</th>
+            <th>Điểm Văn</th>
+            <th>Tổng Điểm</th>
+        </tr>
+        @foreach (var thiSinh in Model)
+        {
+            <tr>
+                <td>@thiSinh.sbd</td>
+                <td>@thiSinh.hoten</td>
+                <td>@thiSinh.diemtoan</td>
+                <td>@thiSinh.diemvan</td>
+                <td>@thiSinh.TongDiem</td>
+            </tr>
+        }
+    </table>
+</div>
+<p>
+    @Html.ActionLink("BACK TO LIST", "NhapSV")
+</p>

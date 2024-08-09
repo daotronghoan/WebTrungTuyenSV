@@ -1,0 +1,27 @@
+﻿@model C1D1_DaoTrongHoan_2021606290.Models.ThiSinh
+
+@{
+    ViewBag.Title = "Nhập SV";
+}
+
+@using (Html.BeginForm("NhapSV", "QuanLyThiSinh", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(model => model.sbd, "SBD:")
+        @Html.TextBoxFor(model => model.sbd, new { id = "sbd" })
+    </div>
+    <div>
+        @Html.LabelFor(model => model.hoten, "Họ Tên:")
+        @Html.TextBoxFor(model => model.hoten, new { id = "hoten" })
+    </div>
+    <div>
+        @Html.LabelFor(model => model.diemtoan, "Điểm Toán:")
+        @Html.TextBoxFor(model => model.diemtoan, new { id = "diemtoan" })
+    </div>
+    <div>
+        @Html.LabelFor(model => model.diemvan, "Điểm Văn:")
+        @Html.TextBoxFor(model => model.diemvan, new { id = "diemvan" })
+    </div>
+
+    <button type="submit" name="btnNhap" class="btn btn-primary">Nhập</button>
+}

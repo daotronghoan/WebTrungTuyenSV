@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_View</title>
+    <style>
+        body {
+            background: #c3c3c3;
+            font-family: 'Tahoma', Tahoma, Geneva, Verdana, sans-serif;
+           /* font-weight: bold;*/
+        }
+
+        .chung {
+            width: 100%;
+            background-color: aquamarine;
+            border: 10px solid white;
+            margin: 20px auto;
+        }
+
+        header {
+            width: 100%;
+            margin: 0px;
+            height: 10%;
+            background-color: blue;
+            color: white;
+        }
+
+            header h1 {
+                text-align: center;
+                margin: 0px;
+            }
+
+        nav {
+            background-color: blueviolet;
+            height: 15%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+            nav ul {
+                text-align: right;
+                margin-top: 1px;
+            }
+
+                nav ul li {
+                    padding: 5px 20px;
+                    border-left: 5px solid solid white;
+                    display: inline-block;
+                }
+
+                    nav ul li a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: white;
+                    }
+
+                        nav ul li a:hover {
+                            font-weight: bold;
+                            color: aqua;
+                            
+                        }
+    </style>
+</head>
+<body>
+    <div class="chung">
+        <header>
+            <h1>
+                TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Trúng Tuyển", "TrungTuyen", "QuanLyThiSinh", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Olympic", "Olympic", "QuanLyThiSinh", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Nhập thông tin", "NhapSV", "QuanLyThiSinh", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Danh Sách", "ThiSinhList", "QuanLyThiSinh", new { area = "" }, new { @class = "nav-link" })</li>
+            </ul>
+        </nav>
+        <div>
+            @RenderBody()
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model List<C1D1_DaoTrongHoan_2021606290.Models.ThiSinh>
+
+@{
+    ViewBag.Title = "Thông Tin Sinh Viên";
+}
+
+<h2>Thông Tin Sinh Viên</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>SBD</th>
+                <th>Họ Tên</th>
+                <th>Điểm Toán</th>
+                <th>Điểm Văn</th>
+                <th>Tổng Điểm</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sinhVien in Model)
+            {
+                <tr>
+                    <td>@sinhVien.sbd</td>
+                    <td>@sinhVien.hoten</td>
+                    <td>@sinhVien.diemtoan</td>
+                    <td>@sinhVien.diemvan</td>
+                    <td>@sinhVien.TongDiem</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@Html.ActionLink("Thêm sinh viên", "NhapSV")
